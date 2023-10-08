@@ -1,4 +1,4 @@
-package weekone.lecture;
+package main.java.week1.lecture;
 
 import java.util.Arrays;
 import java.util.List;
