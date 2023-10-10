@@ -7,8 +7,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your age: ");
 
+        int age = scanner.nextInt();
+
         while (true) {
-            int age = scanner.nextInt();
             if (age < 3 || age > 125) {
                 System.out.println("You are lying.");
                 if (age < 3) {
@@ -17,10 +18,12 @@ public class Main {
                     System.out.println("Go die!");
                 }
                 System.out.println("Please enter your age again! Don't lie");
+                age = scanner.nextInt();
                 continue;
             }
-            System.out.println("You are " + age + " years old!");
             break;
         }
+        System.out.println("You are " + age + " years old!");
+
     }
 }
