@@ -1,6 +1,6 @@
 package week3.lab;
 
-import java.util.List;
+import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,6 +11,12 @@ public class Main {
 //
 //        tasks.stream().forEach(task -> System.out.println(task.getTaskDescription()));
 
+        DbConnect db = new DbConnect();
 
+        try {
+            db.getById(2);
+        } catch (SQLException e) {
+            System.out.println(e);
+        }
     }
 }
