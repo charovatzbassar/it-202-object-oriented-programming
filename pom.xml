@@ -20,6 +20,12 @@
             <artifactId>mysql-connector-j</artifactId>
             <version>8.0.33</version>
         </dependency>
+        <dependency>
+            <groupId>io.github.awsjavakit</groupId>
+            <artifactId>attempt</artifactId>
+            <version>0.6.3</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
 
