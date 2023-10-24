@@ -80,6 +80,15 @@ public class CreditCard {
         this.balance += amount;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "CreditCard {" +
+                "\n cardNumber=" + cardNumber +
+                ",\n issueDate=" + issueDate +
+                ",\n balance=" + balance +
+                ",\n cvc='" + cvc + '\'' +
+                ",\n cardType=" + cardType +
+                ",\n cardIssuer=" + cardIssuer +
+                "\n}";
+    }
 }
