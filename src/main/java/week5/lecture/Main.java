@@ -6,7 +6,7 @@ public class Main {
         Book b2 = new Book("The Secret History", 640);
         Book b3 = new Book("Stranger", 200);
 
-        if (b2.equals(b1)) System.out.println("They are the same");
+//        if (b2.equals(b1)) System.out.println("They are the same");
     }
 }
 
