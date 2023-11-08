@@ -17,32 +17,32 @@ public class Main {
 //
 //        BinarySearch.search(values, 10);
 
-        NightSky ns = new NightSky(0.1, 40, 10);
-        ns.print();
-        System.out.println(ns.starsInLastPrint());
-
-
-        Library Library = new Library();
-
-        Library.addBook(new Book("Cheese Problems Solved", "Woodhead Publishing", 2007));
-        Library.addBook(new Book("The Stinky Cheese Man and Other Fairly Stupid Tales", "Penguin Group", 1992));
-        Library.addBook(new Book("NHL Hockey", "Stanley Kupp", 1952));
-        Library.addBook(new Book("Battle Axes", "Tom A. Hawk", 1851));
-
-        ArrayList<Book> result = Library.searchByTitle("cheese");
-        for (Book book: result) {
-            System.out.println(book);
-        }
-
-        System.out.println("---");
-        for (Book book: Library.searchByPublisher("Penguin Group  ")) {
-            System.out.println(book);
-        }
-
-        System.out.println("---");
-        for (Book book: Library.searchByYear(1851)) {
-            System.out.println(book);
-        }
+//        NightSky ns = new NightSky(0.1, 40, 10);
+//        ns.print();
+//        System.out.println(ns.starsInLastPrint());
+//
+//
+//        Library Library = new Library();
+//
+//        Library.addBook(new Book("Cheese Problems Solved", "Woodhead Publishing", 2007));
+//        Library.addBook(new Book("The Stinky Cheese Man and Other Fairly Stupid Tales", "Penguin Group", 1992));
+//        Library.addBook(new Book("NHL Hockey", "Stanley Kupp", 1952));
+//        Library.addBook(new Book("Battle Axes", "Tom A. Hawk", 1851));
+//
+//        ArrayList<Book> result = Library.searchByTitle("cheese");
+//        for (Book book: result) {
+//            System.out.println(book);
+//        }
+//
+//        System.out.println("---");
+//        for (Book book: Library.searchByPublisher("Penguin Group  ")) {
+//            System.out.println(book);
+//        }
+//
+//        System.out.println("---");
+//        for (Book book: Library.searchByYear(1851)) {
+//            System.out.println(book);
+//        }
 
 
     }
