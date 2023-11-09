@@ -1,10 +1,7 @@
 package week6.lab;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,41 +43,30 @@ public class Main {
 //        for (Book book: Library.searchByYear(1851)) {
 //            System.out.println(book);
 //        }
+//        HashMap<String, String> nicknames = new HashMap<String, String>();
+//        nicknames.put("matti", "mage");
+//        nicknames.put("mikael", "mixu");
+//        nicknames.put("arto", "arppa");
+//        System.out.println(nicknames.get("mikael"));
 
-        Birdwatchers bwdb = new Birdwatchers();
-        Scanner scanner = new Scanner(System.in);
-        List<String> options = Arrays.asList("add", "statistics", "observation", "show");
-        String input = "";
+//        PromissoryNote mattisNote = new PromissoryNote();
+//        mattisNote.setLoan("Arto", 51.5);
+//        mattisNote.setLoan("Arto", 10.5);
+//        System.out.println(mattisNote.howMuchIsTheDebt("Artoa"));
 
-        while (!input.equals("quit")) {
-            input = scanner.nextLine().toLowerCase();
+//        Dictionary dictionary = new Dictionary();
+//        dictionary.add("apina", "monkey");
+//        dictionary.add("banaani", "banana");
+//        System.out.println(dictionary.amountOfWords());
 
-            if (!options.contains(input)) {
-                continue;
-            }
-
-            switch (input) {
-                case "add" -> {
-                    System.out.print("Name: ");
-                    String name = scanner.nextLine();
-                    System.out.print("Latin Name: ");
-                    String latinName = scanner.nextLine();
-                    bwdb.add(name, latinName);
-                }
-                case "statistics" -> bwdb.statistics();
-                case "show" -> {
-                    System.out.print("What? ");
-                    String birdName = scanner.nextLine();
-                    bwdb.show(birdName);
-                }
-                case "observation" -> {
-                    System.out.print("What was observed? ");
-                    String observedBirdName = scanner.nextLine();
-                    bwdb.observation(observedBirdName);
-                }
-            }
-        }
-
+        ArrayList<Integer> ints = new ArrayList<Integer>();
+        ints.add(1);
+        ints.add(2);
+        ints.add(3);
+        ints.add(4);
+//        System.out.println(ints);
+//        System.out.println(reverseList(ints));
+        sumOfEvenAndOdd(ints);
 
     }
 
@@ -140,5 +126,29 @@ public class Main {
                 System.out.print(arr[i] + ", ");
             }
         }
+    }
+
+    public static <T extends Integer> void sumOfEvenAndOdd(List<T> numbers) {
+        int evenSum = 0, oddSum = 0;
+
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                evenSum += num;
+            } else {
+                oddSum += num;
+            }
+        }
+
+        System.out.println("Even: " + evenSum + "\nOdd: " + oddSum);
+    }
+
+    public static <T> ArrayList<T> reverseList(ArrayList<T> arr) {
+        for (int i = 0; i < arr.size() / 2; i++) {
+            T first = arr.get(i);
+            T last = arr.get(arr.size() - i - 1);
+            arr.set(arr.size() - i - 1, first);
+            arr.set(i, last);
+        }
+        return arr;
     }
 }
