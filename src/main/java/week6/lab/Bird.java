@@ -16,4 +16,9 @@ public class Bird {
     public String getLatinName() {
         return latinName;
     }
+
+    @Override
+    public String toString() {
+        return this.name + " (" + this.latinName + ")";
+    }
 }

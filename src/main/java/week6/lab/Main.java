@@ -1,7 +1,10 @@
 package week6.lab;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -43,6 +46,40 @@ public class Main {
 //        for (Book book: Library.searchByYear(1851)) {
 //            System.out.println(book);
 //        }
+
+        Birdwatchers bwdb = new Birdwatchers();
+        Scanner scanner = new Scanner(System.in);
+        List<String> options = Arrays.asList("add", "statistics", "observation", "show");
+        String input = "";
+
+        while (!input.equals("quit")) {
+            input = scanner.nextLine().toLowerCase();
+
+            if (!options.contains(input)) {
+                continue;
+            }
+
+            switch (input) {
+                case "add" -> {
+                    System.out.print("Name: ");
+                    String name = scanner.nextLine();
+                    System.out.print("Latin Name: ");
+                    String latinName = scanner.nextLine();
+                    bwdb.add(name, latinName);
+                }
+                case "statistics" -> bwdb.statistics();
+                case "show" -> {
+                    System.out.print("What? ");
+                    String birdName = scanner.nextLine();
+                    bwdb.show(birdName);
+                }
+                case "observation" -> {
+                    System.out.print("What was observed? ");
+                    String observedBirdName = scanner.nextLine();
+                    bwdb.observation(observedBirdName);
+                }
+            }
+        }
 
 
     }
