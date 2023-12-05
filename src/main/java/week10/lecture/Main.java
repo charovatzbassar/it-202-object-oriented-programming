@@ -17,7 +17,7 @@ public class Main {
 //        }
 
 //        simpleWrite("Something is written here");
-//            simpleRead("output.txt");
+        simpleRead("output.txt");
         Cat myCat = new Cat("Cicko Cile", 12);
         Field[] catFields = myCat.getClass().getDeclaredFields();
 
