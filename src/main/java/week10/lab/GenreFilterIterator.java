@@ -2,11 +2,13 @@ package week10.lab;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 import java.util.function.Consumer;
 
 public class GenreFilterIterator implements Iterator<Song> {
     private ArrayList<Song> songs;
     private String targetGenre;
+    private int currentIndex = 0;
 
     public GenreFilterIterator(ArrayList<Song> songs, String targetGenre) {
         this.songs = songs;
@@ -15,11 +17,19 @@ public class GenreFilterIterator implements Iterator<Song> {
 
     @Override
     public boolean hasNext() {
-        return false;
+        while (currentIndex < songs.size() && songs.get(currentIndex).getGenre().equals(this.targetGenre)) {
+            currentIndex++;  // Skip even numbers
+        }
+        return currentIndex < songs.size();
     }
 
     @Override
     public Song next() {
-        return null;
+        if (!hasNext()) {
+            throw new NoSuchElementException();
+        }
+        return songs.get(currentIndex++);
     }
+
+}
 }
