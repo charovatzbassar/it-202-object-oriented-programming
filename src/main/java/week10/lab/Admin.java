@@ -1,8 +1,9 @@
 package week10.lab;
 
+@UserPermission(permissionLevel = PermissionLevel.ADMIN)
 public class Admin {
-    private String username;
 
+    private String username;
     public Admin(String username) {
         this.username = username;
     }

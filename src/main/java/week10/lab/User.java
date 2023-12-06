@@ -1,5 +1,6 @@
 package week10.lab;
 
+@UserPermission(permissionLevel = PermissionLevel.USER)
 public class User {
     private String username;
 
