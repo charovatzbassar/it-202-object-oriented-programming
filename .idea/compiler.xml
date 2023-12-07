@@ -9,8 +9,5 @@
         <module name="it-202-object-oriented-programming" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="it-202-object-oriented-programming" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
