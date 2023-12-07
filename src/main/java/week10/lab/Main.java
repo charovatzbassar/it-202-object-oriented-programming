@@ -1,5 +1,6 @@
 package week10.lab;
 
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -7,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
-    public static void main(String[] args) throws IllegalAccessException, InvocationTargetException {
+    public static void main(String[] args) throws IOException, IllegalAccessException, InvocationTargetException {
 //        User bassar = new User("chrvtzbssr");
 //        Admin daniel = new Admin("Daniel");
 //
@@ -35,7 +36,9 @@ public class Main {
 //            }
 //        }
 
-
+        Events events = new Events();
+        events.generateEventsFile("events.txt");
+        events.readEventsFile("events.txt");
 
     }
 }

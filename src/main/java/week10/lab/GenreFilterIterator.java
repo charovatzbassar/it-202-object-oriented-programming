@@ -32,4 +32,4 @@ public class GenreFilterIterator implements Iterator<Song> {
     }
 
 }
-}
+
