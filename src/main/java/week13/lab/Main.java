@@ -2,6 +2,8 @@ package week13.lab;
 
 import week13.lab.problem3.CamelCaseFormatter;
 import week13.lab.problem3.TextEditor;
+import week13.lab.problem4.DeviceAdapter;
+import week13.lab.problem4.OldDeviceImpl;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,5 +25,10 @@ public class Main {
 //        TextEditor editor = new TextEditor();
 //        editor.setFormatter(new CamelCaseFormatter());
 //        System.out.println(editor.formatText("Something in the way"));
+
+//        OldDeviceImpl oldDevice = new OldDeviceImpl();
+//        DeviceAdapter adapter = new DeviceAdapter(oldDevice);
+//
+//        adapter.operateNewFunction();
     }
 }
