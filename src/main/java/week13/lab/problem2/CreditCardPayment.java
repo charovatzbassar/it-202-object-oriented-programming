@@ -1,4 +1,4 @@
-package week13.lab;
+package week13.lab.problem2;
 
 public class CreditCardPayment implements Payment {
     @Override

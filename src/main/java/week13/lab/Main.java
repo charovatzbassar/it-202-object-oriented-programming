@@ -1,5 +1,8 @@
 package week13.lab;
 
+import week13.lab.problem3.CamelCaseFormatter;
+import week13.lab.problem3.TextEditor;
+
 public class Main {
     public static void main(String[] args) {
 //        Logger logger = Logger.getInstance();
@@ -16,5 +19,9 @@ public class Main {
 //
 //        payPalPayment.processPayment();
 //        creditCardPayment.processPayment();
+
+//        TextEditor editor = new TextEditor();
+//        editor.setFormatter(new CamelCaseFormatter());
+//        System.out.println(editor.formatText("Something in the way"));
     }
 }

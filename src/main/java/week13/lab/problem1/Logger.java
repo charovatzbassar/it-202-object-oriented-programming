@@ -1,4 +1,4 @@
-package week13.lab;
+package week13.lab.problem1;
 
 public class Logger {
     private static Logger instance;
